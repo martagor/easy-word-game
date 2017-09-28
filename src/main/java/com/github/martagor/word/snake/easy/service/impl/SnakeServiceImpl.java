@@ -7,6 +7,8 @@ import com.github.martagor.word.snake.easy.service.SnakeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Service
 public class SnakeServiceImpl implements SnakeService {
 
@@ -15,13 +17,14 @@ public class SnakeServiceImpl implements SnakeService {
 
 
     @Override
-    public PieceOfSnake addWord(String word) {
+    public void addWord(String word) {
         PieceOfSnake lastWord = snakeRepository.findFirstByOrderByTimeDesc();
         if (lastWord == null) {
-            lastWord.setWord(word);
-            return lastWord;
+            PieceOfSnake snake = new PieceOfSnake();
+            snake.setWord(word);
+            snake.setTime(LocalDateTime.now());
+            snakeRepository.save(snake);
         }
-        return lastWord;
     }
 
 }

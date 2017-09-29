@@ -1,9 +1,6 @@
 package com.github.martagor.word.snake.easy.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -16,6 +13,9 @@ public class PieceOfSnake {
     private String word;
 
     private LocalDateTime time;
+
+    @ManyToOne
+    private User user;
 
     public Long getId() {
         return id;
@@ -39,5 +39,13 @@ public class PieceOfSnake {
 
     public void setTime(LocalDateTime time) {
         this.time = time;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

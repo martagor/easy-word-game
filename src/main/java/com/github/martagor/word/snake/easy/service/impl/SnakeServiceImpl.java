@@ -1,6 +1,7 @@
 package com.github.martagor.word.snake.easy.service.impl;
 
 
+import com.github.martagor.word.snake.easy.exceptions.ForbiddenWordException;
 import com.github.martagor.word.snake.easy.model.PieceOfSnake;
 import com.github.martagor.word.snake.easy.repository.SnakeRepository;
 import com.github.martagor.word.snake.easy.service.SnakeService;
@@ -24,12 +25,19 @@ public class SnakeServiceImpl implements SnakeService {
 
     @Override
     public void addWord(String word) {
+        validate(word);
         PieceOfSnake lastWord = snakeRepository.findFirstByOrderByTimeDesc();
         if (lastWord == null) {
             PieceOfSnake snake = new PieceOfSnake();
             snake.setWord(word);
             snake.setTime(LocalDateTime.now());
             snakeRepository.save(snake);
+        }
+    }
+
+    private void validate(String word) {
+        if (word.toLowerCase().endsWith("y")) {
+            throw new ForbiddenWordException();
         }
     }
 

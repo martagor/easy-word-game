@@ -41,7 +41,10 @@ public class SnakeServiceImpl implements SnakeService {
         if (lastWord == null) {
             return;
         }
+
         char lastLetter = lastWord.toLowerCase().charAt(lastWord.length()-1);
+
+        //StringUtils.endsWithIgnoreCase(lastWord, lastLetter)
         if (word.charAt(0) == lastLetter) {
             return;
         }
@@ -61,5 +64,6 @@ public class SnakeServiceImpl implements SnakeService {
                 .map(PieceOfSnake::getWord)
                 .collect(toList());
     }
+
 
 }

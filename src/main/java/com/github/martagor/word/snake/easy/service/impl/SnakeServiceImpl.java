@@ -1,6 +1,7 @@
 package com.github.martagor.word.snake.easy.service.impl;
 
 
+import com.github.martagor.word.snake.easy.exceptions.FirstLetterNotMatchException;
 import com.github.martagor.word.snake.easy.exceptions.ForbiddenWordException;
 import com.github.martagor.word.snake.easy.model.PieceOfSnake;
 import com.github.martagor.word.snake.easy.repository.SnakeRepository;
@@ -33,6 +34,18 @@ public class SnakeServiceImpl implements SnakeService {
             snake.setTime(LocalDateTime.now());
             snakeRepository.save(snake);
         }
+    }
+
+    private void checkWordMatchingExistingSnake(String word) {
+        String lastWord = snakeRepository.findFirstByOrderByTimeDesc().getWord();
+        if (lastWord == null) {
+            return;
+        }
+        char lastLetter = lastWord.toLowerCase().charAt(lastWord.length()-1);
+        if (word.charAt(0) == lastLetter) {
+            return;
+        }
+        throw new FirstLetterNotMatchException();
     }
 
     private void validate(String word) {

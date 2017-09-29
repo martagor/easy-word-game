@@ -42,7 +42,7 @@ public class SnakeServiceImpl implements SnakeService {
         User loggedUser = userRepository.findOne(getLoggedUserId());
         snake.setUser(loggedUser);
         if (lastWord == null) {
-            snake.setWord(word);
+            snake.setWord(formatWord(word));
             snake.setTime(LocalDateTime.now());
             snakeRepository.save(snake);
         } else {

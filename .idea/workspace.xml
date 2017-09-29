@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="210d50f9-7938-4487-b866-c0df5039289b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/UserDetailsServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/controller/SnakeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/controller/SnakeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/SecurityConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/service/SnakeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/service/SnakeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/service/impl/SnakeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/service/impl/SnakeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/login.html" afterPath="$PROJECT_DIR$/src/main/resources/public/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/UserDetailsServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +79,8 @@
       <file leaf-file-name="UserDetailsServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/UserDetailsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="194">
+              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,11 +191,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/service/SnakeService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/service/impl/SnakeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/UserDetailsServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -626,7 +619,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1506612931185</updated>
-      <workItem from="1506612932712" duration="18042000" />
+      <workItem from="1506612932712" duration="18125000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1506613619064</created>
@@ -691,11 +684,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506701851368</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add:&#10;UserDetailsServiceImpl">
+      <created>1506706340826</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1506706340826</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18042000" />
+    <option name="totallyTimeSpent" value="18125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -780,7 +780,8 @@
     <MESSAGE value="add User to model" />
     <MESSAGE value="add:&#10;method -&gt; validation if word ends with &quot;y&quot;" />
     <MESSAGE value="add:&#10;UserService -&gt; first and last letter validation method &#10;package 'service' moved&#10;set Http security -&gt; Application.class logoutSuccessUrl and failureHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="add:&#10;UserService -&gt; first and last letter validation method &#10;package 'service' moved&#10;set Http security -&gt; Application.class logoutSuccessUrl and failureHandler" />
+    <MESSAGE value="add:&#10;UserDetailsServiceImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="add:&#10;UserDetailsServiceImpl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -986,8 +987,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/martagor/word/snake/easy/security/UserDetailsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="194">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
